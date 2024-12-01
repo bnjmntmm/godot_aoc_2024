@@ -33,16 +33,16 @@ text = "test"
 
 [node name="sumText" type="Label" parent="TaskOneView"]
 layout_mode = 0
-offset_left = 138.0
-offset_top = 138.0
-offset_right = 185.0
-offset_bottom = 161.0
-text = "Sums:"
+offset_left = 70.0
+offset_top = 145.0
+offset_right = 206.0
+offset_bottom = 168.0
+text = "Current Distance:"
 
 [node name="item" type="Label" parent="TaskOneView/sumText"]
 layout_mode = 0
-offset_left = 79.0
-offset_right = 151.0
+offset_left = 145.0
+offset_right = 217.0
 offset_bottom = 23.0
 text = "test"
 
@@ -59,6 +59,101 @@ offset_left = 90.0
 offset_right = 162.0
 offset_bottom = 23.0
 text = "test"
+
+[node name="FinalSum" type="Label" parent="TaskOneView"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 228.0
+offset_right = 110.0
+offset_bottom = 251.0
+text = "All Sums combined: "
+
+[node name="TaskTwoView" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 553.0
+offset_right = 1106.0
+offset_bottom = 618.0
+
+[node name="leftText" type="Label" parent="TaskTwoView"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 72.0
+offset_right = 140.0
+offset_bottom = 95.0
+text = "Current Number: "
+
+[node name="item" type="Label" parent="TaskTwoView/leftText"]
+layout_mode = 0
+offset_left = 137.0
+offset_right = 209.0
+offset_bottom = 23.0
+text = "test"
+
+[node name="rightText" type="Label" parent="TaskTwoView"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 71.0
+offset_right = 288.0
+offset_bottom = 94.0
+text = "Occurances:"
+
+[node name="item" type="Label" parent="TaskTwoView/rightText"]
+offset_left = 111.0
+offset_right = 183.0
+offset_bottom = 23.0
+text = "test"
+
+[node name="header" type="Label" parent="TaskTwoView"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 228.0
+offset_right = 255.0
+offset_bottom = 251.0
+text = "Similarities:"
+
+[node name="SimNumb1" type="Label" parent="TaskTwoView"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 273.0
+offset_right = 114.0
+offset_bottom = 296.0
+text = "Number:"
+
+[node name="numb" type="Label" parent="TaskTwoView/SimNumb1"]
+layout_mode = 0
+offset_left = 74.0
+offset_right = 143.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="SimNumb2" type="Label" parent="TaskTwoView"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 273.0
+offset_right = 342.0
+offset_bottom = 296.0
+text = "Number:"
+
+[node name="numb" type="Label" parent="TaskTwoView/SimNumb2"]
+offset_left = 77.0
+offset_right = 146.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="simbetween" type="Label" parent="TaskTwoView"]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 336.0
+offset_right = 227.0
+offset_bottom = 359.0
+text = "Total Score:"
+
+[node name="numb" type="Label" parent="TaskTwoView/simbetween"]
+layout_mode = 0
+offset_left = 123.0
+offset_right = 192.0
+offset_bottom = 23.0
+text = "0"
 
 [node name="Task1Button" type="Button" parent="."]
 layout_mode = 1
@@ -82,9 +177,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 62.0
+offset_left = 225.0
 offset_top = -30.0
-offset_right = 119.0
+offset_right = 282.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
