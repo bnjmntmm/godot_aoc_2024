@@ -30,8 +30,9 @@ func _ready() -> void:
 	#print(split_long_input)
 	
 	##tried 1893
+	## -> Solution 1890
 	count_X_Shaped_Mas(split_long_input)
-
+	#count_X_Shaped_Mas(test_input.split("\n"))
 
 	
 	
@@ -41,8 +42,8 @@ func _ready() -> void:
 
 func count_X_Shaped_Mas(input):
 	occurances = 0
-	for i in range(0,len(input)-1):
-		for j in range(0,len(input[0])-1):
+	for i in range(1,len(input)-1):
+		for j in range(1,len(input[0])-1):
 			
 			## if at i and j is an A
 			## input[i-1][j+1] should be either M or S
