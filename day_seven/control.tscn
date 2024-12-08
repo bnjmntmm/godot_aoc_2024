@@ -10,3 +10,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0fbet")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 153.0
+offset_right = 420.0
+offset_bottom = 184.0
+text = "Start Parsing"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

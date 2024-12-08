@@ -15,20 +15,13 @@ var test_input = "190: 10 19
 var operators = ["+", "*", "||"]
 
 func _ready() -> void:
-	helper = HELPER.new()
-	var parsed_input = test_input.split("\n")
-	
-	var big_input = helper.read_file("res://input/input.txt")
-	var parsed_big_input = big_input.split("\n")
-	parsed_big_input.remove_at(len(parsed_big_input)-1)
-	
-	#task_one(parsed_big_input)
-	
+	helper = HELPER.new()	
 	
 	
 func task_one(parsed_input):
 	var valid_values = []
 	for row in parsed_input:
+		print("new row")
 		#split input into target value and equation
 		var row_split = row.split(":")
 		var target_value = int(row_split[0].strip_edges())
@@ -51,7 +44,6 @@ func task_one(parsed_input):
 				break
 	print(calculate_sum_of_values(valid_values))
 	
-				
 		
 func generate_operator_combinations(operator_count):
 	var results = []
@@ -81,5 +73,21 @@ func save_eval(eval_equation):
 			if i+1 <= len(eval_equation):
 				var next_value = eval_equation[i+1]
 				value += int(next_value)
+				
+		## this part for part2
+		elif eval_equation[i] == "||":
+			if i+1 <= len(eval_equation):
+				var next_value = eval_equation[i+1]
+				var prevValueAsString = str(value)
+				var combinesVal = prevValueAsString+next_value
+				value = int(combinesVal)
 	return value
 				
+
+
+func _on_button_button_down() -> void:
+	var big_input = helper.read_file("res://input/input.txt")
+	var parsed_big_input = big_input.split("\n")
+	parsed_big_input.remove_at(len(parsed_big_input)-1)
+	
+	task_one(parsed_big_input)
